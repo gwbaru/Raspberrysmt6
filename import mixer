@@ -1,0 +1,19 @@
+from pygame import mixer
+
+mixer.init()
+mixer.music.load("file2.mp3")
+mixer.music.play()
+
+while True:
+	print('Tekan p untuk pause; s untuk resume')
+	print('e untuk keluar')
+	huruf = input(" ")
+	
+	if huruf == 'p':
+		mixer.music.pause()
+		
+	elif huruf == 's':
+		mixer.music.unpause()
+	
+	elif huruf == 'e':
+		mixer.music.stop()
